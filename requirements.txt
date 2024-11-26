@@ -1,0 +1,5 @@
+paho-mqtt
+Adafruit-DHT
+supabase
+python-dotenv
+spidev
