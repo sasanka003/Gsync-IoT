@@ -8,21 +8,21 @@ def main():
         try:
             # Read sensor data
             humidity, temperature = read_dht22()
-            co2_level = read_mq135()
+            # co2_level = read_mq135()
             
             # Prepare data payload
             data = {
                 "temperature": temperature,
                 "humidity": humidity,
-                "co2_level": co2_level,
+                # "co2_level": co2_level,
                 "timestamp": time.strftime('%Y-%m-%d %H:%M:%S')
             }
 
             # Publish to MQTT broker
-            publish_data(data)
+            # publish_data(data)
 
             # Insert into Supabase
-            insert_data_to_supabase(data)
+            # insert_data_to_supabase(data)
 
             print(f"Data: {data}")
 
