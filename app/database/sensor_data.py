@@ -19,8 +19,8 @@ class SensorResponse(BaseModel):
 
 # Response Model for Retrieving Image Data
 class ImageResponse(BaseModel):
-    id: UUID = Field(..., description="Unique identifier of the image record")
-    media_url: str = Field(..., description="URL of the image media")
+    image_id: int = Field(..., description="Unique identifier of the image record")
+    image_url: str = Field(..., description="URL of the image media")
     sensor_id: int = Field(..., description="ID of the sensor")
     plantation_id: int = Field(..., description="ID of the plantation")
-    timestamp: datetime = Field(..., description="Timestamp of the image capture")
+    created_at: datetime = Field(..., description="Timestamp of the image capture")
