@@ -1,6 +1,6 @@
 from fastapi import APIRouter, HTTPException
-from app.models.sensor_data import SensorData
-from app.services.sensors_service import save_sensor_data
+from models.sensor_data import SensorData
+from services.sensor_service import save_sensor_data
 
 router = APIRouter(
     prefix="/api",

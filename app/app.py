@@ -1,9 +1,16 @@
 from fastapi import FastAPI
-from app.routers import sensors
+from routers import sensor
+from scheduler import start_scheduler
 
 app = FastAPI()
 
-app.include_router(sensors.router)
+# Include Routers
+app.include_router(sensor.router)
+
+# Start Scheduler on Application Startup
+# @app.on_event("startup")
+# def startup_event():
+#     start_scheduler()
 
 @app.get("/")
 async def root():
